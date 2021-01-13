@@ -1,0 +1,27 @@
+{
+  "name": "onja-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsikitsiky/onja-weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsikitsiky/onja-weather/issues"
+  },
+  "homepage": "https://github.com/Tsikitsiky/onja-weather#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ]
+}
