@@ -23,16 +23,18 @@ function Weather() {
                                     onChange={(e) => setInput(e.target.value)} />
                                 <button  className="btnSubmit">Search</button>
                             </form>
-                            <button className="search-result" onClick={submit}>{currentCity}</button>
+                            <button className="search-result" onClick={submit}>{input}</button>
                         </div>
                         : 
                         <div>
                             <button className="btnSearch" onClick={() => setIsSearch(true)}>Search for places</button>
                             <div className="weatherDesc">
                                 <img src={`https://www.metaweather.com/static/img/weather/${weatherDetail.consolidated_weather?.[0].weather_state_abbr}.svg`} />
-                                <p className="temp">{Math.round(weatherDetail.consolidated_weather?.[0].the_temp)}°C</p>
+                                <p>
+                                    <span className="temp light-text">{Math.round(weatherDetail.consolidated_weather?.[0].the_temp)}</span>
+                                    °C</p>
                                 <p className="state-name">{weatherDetail.consolidated_weather?.[0].weather_state_name}</p>
-                                <p>Today - {weatherDetail.consolidated_weather?.[0].applicable_date}</p>
+                                <p>Today - {new Date(weatherDetail.consolidated_weather?.[0].applicable_date).toDateString()}</p>
                                 <p className="location">Location: {currentCity}</p>
                             </div>
                         </div>}

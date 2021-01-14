@@ -63,7 +63,6 @@ function ContextProvider({children}) {
     }
 
     useEffect(() => {
-        // 
         fetchData(currentCity)
     },[]);
     console.log(weatherDetail);
