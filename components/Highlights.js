@@ -15,6 +15,13 @@ background: #1E213A;
     font-size: 36px;
     line-height: 42px;
 }
+.percent {
+    text-align: right;
+}
+.percent-number {
+    display: flex;
+    justify-content: space-between;
+}
 `;
 
 const DivContainer = styled.div`
@@ -29,9 +36,11 @@ align-items: center;
 `;
 
 function Highlights() {
-    const {weatherDetail} = useContext(Context);
+    const {state} = useContext(Context)
+    const {loading, weatherDetail} = state;
     return (
-        <div className="highlights-container">
+        <div>
+            {loading ? <h1>Loading...</h1> : <div className="highlights-container">
             <h3 className="light-text">Today's highlights</h3>
             <DivContainer>
                 <DivStyle>
@@ -44,11 +53,20 @@ function Highlights() {
                     <p>Humidity</p>
                     <p className="light-text">
                         <span className="bold ">{weatherDetail.consolidated_weather?.[0].humidity}</span> %</p>
-                    <div className="wrapper">
-                        <div style={{width:`${weatherDetail.consolidated_weather?.[0].humidity}%`}}>
-                            <div className="percentage"></div>
+                    <div className="progerss-bar">
+                        <div className="percent-number">
+                            <span>0</span>
+                            <span>50</span>
+                            <span>100</span>
                         </div>
+                        <div className="wrapper">
+                            <div style={{width:`${weatherDetail.consolidated_weather?.[0].humidity}%`}}>
+                                <div className="percentage"></div>
+                            </div>
+                        </div>
+                        <div className="percent">%</div>
                     </div>
+
                 </DivStyle>
                 <DivStyle>
                     <p>Visibility</p>
@@ -63,6 +81,7 @@ function Highlights() {
                     <p></p>
                 </DivStyle>
             </DivContainer>
+        </div>}
         </div>
     )
 }
