@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 const DivStyle = styled.div`
 width: 90%;
-text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 background: #1E213A;
 @media(min-width: 1000px) {
     
@@ -47,7 +49,7 @@ function Highlights() {
                     <p>Wind status</p>
                     <p className="light-text">
                         <span className="bold">{Math.round(weatherDetail.consolidated_weather?.[0].wind_speed)}</span> mph</p>
-                    <p>{weatherDetail.consolidated_weather?.[0].wind_direction_compass}</p>
+                    <p className="wind">{weatherDetail.consolidated_weather?.[0].wind_direction_compass}</p>
                 </DivStyle>
                 <DivStyle>
                     <p>Humidity</p>

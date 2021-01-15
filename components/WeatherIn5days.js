@@ -37,8 +37,8 @@ function WeatherIn5days() {
                         <img src={`https://www.metaweather.com/static/img/weather/${weather.weather_state_abbr}.svg`} />
                         {isFarenheit 
                             ? <p className="degree">
-                                <span className="light-text">{(Math.round(weather.min_temp) * 9/5) + 32}°F</span>
-                                <span>{(Math.round(weather.max_temp) * 9 / 5) + 32}°F</span>
+                                <span className="light-text">{(Math.round(weather.min_temp * 9/5) + 32)}°F</span>
+                                <span>{(Math.round(weather.max_temp * 9 / 5) + 32)}°F</span>
                             </p> 
                             : <p className="degree">
                                 <span className="light-text">{Math.round(weather.min_temp)}°C</span>

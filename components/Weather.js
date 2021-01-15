@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import {Context} from '../Context'
+import {Context} from '../Context';
 
 function Weather() {
     const {state, searchSubmit, getSearchResult, isFarenheit} = useContext(Context);
@@ -38,14 +38,14 @@ function Weather() {
                             {loading ? <h1>Loading...</h1> : <div className="weatherDesc">
                                 <img src={`https://www.metaweather.com/static/img/weather/${weatherDetail.consolidated_weather?.[0].weather_state_abbr}.svg`} />
                                 {isFarenheit ? <p>
-                                    <span className="temp light-text">{(Math.round(weatherDetail.consolidated_weather?.[0].the_temp) * 9 / 5) + 32}</span>
+                                    <span className="temp light-text">{(Math.round(weatherDetail.consolidated_weather?.[0].the_temp * 9 / 5) + 32)}</span>
                                     °F</p>
                                 : <p>
                                     <span className="temp light-text">{Math.round(weatherDetail.consolidated_weather?.[0].the_temp)}</span>
                                     °C</p> }
                                 <p className="state-name">{weatherDetail.consolidated_weather?.[0].weather_state_name}</p>
                                 <p>Today - {new Date(weatherDetail.consolidated_weather?.[0].applicable_date).toDateString()}</p>
-                                <p className="location">Location: {currentCity}</p>
+                                <p className="location">{currentCity}</p>
                             </div>}
                         </div>}
         </div>
