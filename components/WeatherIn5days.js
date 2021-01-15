@@ -25,7 +25,8 @@ const FiveWeatherContainer = styled.div`
     }`;
 
 function WeatherIn5days() {
-    const {weatherDetail} = useContext(Context);
+    const {state, isFarenheit} = useContext(Context)
+    const {weatherDetail} = state;
     console.log(weatherDetail.consolidated_weather);
     return (
         <FiveWeatherContainer>
@@ -34,10 +35,15 @@ function WeatherIn5days() {
                     <FiveWeather key={weather.id}>
                         <p>{new Date(weather.applicable_date).toDateString()}</p>
                         <img src={`https://www.metaweather.com/static/img/weather/${weather.weather_state_abbr}.svg`} />
-                        <p className="degree">
-                            <span className="light-text">{Math.round(weather.min_temp)}°C  </span>
-                            <span>{Math.round(weather.max_temp)}°C</span>
-                        </p>
+                        {isFarenheit 
+                            ? <p className="degree">
+                                <span className="light-text">{(Math.round(weather.min_temp) * 9/5) + 32}°F</span>
+                                <span>{(Math.round(weather.max_temp) * 9 / 5) + 32}°F</span>
+                            </p> 
+                            : <p className="degree">
+                                <span className="light-text">{Math.round(weather.min_temp)}°C</span>
+                                <span>{Math.round(weather.max_temp)}°C</span>
+                            </p>}
                     </FiveWeather>
                 )
             })}
