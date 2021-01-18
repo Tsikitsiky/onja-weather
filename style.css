@@ -17,6 +17,7 @@ button {
     outline: none;
     background-color: transparent;
     color: #E7E7EB;
+    cursor: pointer;
 }
 
 .search-result {
