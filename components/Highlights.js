@@ -4,13 +4,15 @@ import styled from 'styled-components';
 
 const DivStyle = styled.div`
 width: 90%;
-display: flex;
-flex-direction: column;
-align-items: center;
+padding: 1rem;
+text-align: center;
 background: #1E213A;
 @media(min-width: 1000px) {
     
-    padding: 1rem;
+    
+}
+.progress-bar {
+    width: 100%;
 }
 .bold {
     font-weight: 500;

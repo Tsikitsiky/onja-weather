@@ -32190,13 +32190,15 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 const DivStyle = _styledComponents.default.div`
 width: 90%;
-display: flex;
-flex-direction: column;
-align-items: center;
+padding: 1rem;
+text-align: center;
 background: #1E213A;
 @media(min-width: 1000px) {
     
-    padding: 1rem;
+    
+}
+.progress-bar {
+    width: 100%;
 }
 .bold {
     font-weight: 500;
@@ -32493,7 +32495,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53194" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51264" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
