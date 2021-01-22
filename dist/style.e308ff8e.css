@@ -1,12 +1,10 @@
 body {
     margin: 0;
-}
-
-#root {
     background: #100E1D;
     color: #A09FB1;
     height: 100%;
 }
+
 
 .light-text {
     color: #E7E7EB;
@@ -106,7 +104,6 @@ form {
     background-position: 35%;
     background-repeat: no-repeat;
     background-size: 16px 20px;
-    
 }
 
 .weather-today {
@@ -168,12 +165,13 @@ img {
 @media(min-width: 1000px) {
     #root {
         position: relative;
-        padding: 4rem;
+        padding: 1rem;
         padding-left: 350px;
+        padding-right: 3rem;
     }
 
     .weather-today {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100%;

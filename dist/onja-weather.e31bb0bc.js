@@ -32385,6 +32385,7 @@ const FiveWeather = _styledComponents.default.div`
         display: flex;
         justify-content: space-between;
         gap: 1rem;
+        max-width: 120px;
     }
     `;
 exports.FiveWeather = FiveWeather;
@@ -32395,7 +32396,6 @@ const FiveWeatherContainer = _styledComponents.default.div`
     gap: 1rem;
     @media(min-width:1000px) {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }`;
 
@@ -32495,7 +32495,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58021" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60904" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
