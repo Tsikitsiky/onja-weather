@@ -3,11 +3,15 @@ body {
     background: #100E1D;
     color: #A09FB1;
     height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 
 .light-text {
     color: #E7E7EB;
+    
 }
 
 button {
@@ -22,11 +26,13 @@ button {
     font-size: 1rem;
     text-transform: capitalize;
     text-align: left;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    width: 100%;
 }
 
 .search-result:hover {
-    border: 1px solid #E7E7EB;
-    padding: 0.5rem 1rem;
+    border: 0.1px solid #E7E7EB;
 }
 
 .search {
@@ -71,7 +77,8 @@ form {
 
 .state-name {
     font-weight: 600;
-    font-size: 26px;
+    font-size: 36px;
+    margin: 0;
 }
 
 .btnClear {
@@ -90,9 +97,10 @@ form {
 }
 
 .temp {
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 60px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 80px;
+    margin: 0;
 }
 
 .highlights-container {

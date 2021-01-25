@@ -7,6 +7,7 @@ width: 90%;
 padding: 1rem;
 text-align: center;
 background: #1E213A;
+font-weight: 700;
 @media(min-width: 1000px) {
     
     
@@ -15,7 +16,7 @@ background: #1E213A;
     width: 100%;
 }
 .bold {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 42px;
 }
