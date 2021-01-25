@@ -98,8 +98,8 @@ form {
 
 .temp {
     font-weight: 700;
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 90px;
+    line-height: 110px;
     margin: 0;
 }
 
@@ -142,6 +142,7 @@ h3 {
 
 img {
     max-width: 202px;
+    max-height: 250px;
 }
 
 .convert {
